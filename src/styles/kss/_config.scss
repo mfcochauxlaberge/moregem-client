@@ -1,0 +1,77 @@
+/* Configuration file
+ *
+ * !default cancels the variable assignment if something was already assigned.
+ *
+ * Copy this file in your project and sets the variables as you wish.
+ */
+
+// Font sizes
+// $size-base:    1.4rem !default;
+
+$size-headers: (
+    1: 2.4rem,
+    2: 1.8rem,
+    3: 1.4rem,
+    4: 1.2rem,
+    5: 1rem,
+    6: 1rem
+) !default;
+
+// $line-height: 1.5 !default;
+
+// Fonts
+// $font-common:    sans-serif !default;
+// $font-headings:  sans-serif !default;
+// $font-monospace: consolas, courier, monospace !default;
+
+// Font colors
+// $color-base:       #000 !default; // font color
+// $color-link:       #333 !default; // links color
+// $color-link-hover: #000 !default; // links hover color
+
+// Padding & margin
+// $spaces: (
+//     tiny:    t 0.5rem,
+//     small:   s 1.0rem,
+//     medium:  m 1.5rem,
+//     large:   l 2.0rem,
+//     xlarge:  x 4.0rem
+// );
+// $space-default: nth(map-get($spaces, small), 2) !default;
+
+// $widths-percentage: (
+//     10:  10%,
+//     25:  25%,
+//     33:  33.3333%,
+//     50:  50%,
+//     66:  66.6666%,
+//     75:  75%,
+//     100: 100%,
+// );
+
+// $widths-pixels: (
+//     50,
+//     100,
+//     150,
+//     200,
+//     300,
+//     400,
+//     500,
+// );
+
+// Responsive breakpoints
+// $screen-tiny:   320px  !default;
+// $screen-small:  640px  !default;
+// $screen-medium: 960px  !default;
+// $screen-large:  1280px !default;
+// $screen-xlarge: 1600px !default;
+$breakpoints: (
+	small:    0  359,
+	normal: 360 9999,
+) !default;
+
+// Defaulyts
+// $def-gutter:     0rem !default;
+// $def-number-col: 1    !default;
+// $left:    2    !default;
+// $right:   1    !default;

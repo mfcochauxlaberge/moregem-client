@@ -1,0 +1,19 @@
+@mixin nospace { margin: 0; padding: 0; }
+
+.hidden { display: none; }
+
+.light {
+    color: #aaa;
+}
+
+// .row {
+//   display: flex;
+// }
+
+// @for $i from 1 through 3 {
+//   .item-#{$i} { width: 2em * $i; }
+// }
+
+.darkgreen { color: #080; }
+.darkred { color: #800; }
+.lightgray { color: #bbb; }

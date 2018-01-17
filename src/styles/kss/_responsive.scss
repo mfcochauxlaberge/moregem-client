@@ -1,0 +1,18 @@
+$mq: ();
+@each $name, $points in $breakpoints {
+	$min: nth(map-get($breakpoints, $name), 1);
+	$max: nth(map-get($breakpoints, $name), 2);
+	$mq: map-merge($mq, (
+		#{$name}: "(min-width: #{$min}px) and (max-width: #{$max}px)",
+		ge-#{$name}: "(min-width: #{$min}px)",
+		le-#{$name}: "(max-width: #{$max}px)"
+	));
+}
+
+@each $name, $qry in $mq {
+	@media #{$qry} {
+		.#{$name}-hidden {
+			display: none !important;
+		}
+	}
+}

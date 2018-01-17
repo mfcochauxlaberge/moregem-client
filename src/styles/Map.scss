@@ -1,0 +1,74 @@
+#Map {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 4px;
+
+	.Tile {
+		margin: 0; padding: 10px;
+		background: rgba(130, 180, 110, 0.6);
+		cursor: pointer;
+
+		img {
+			display: block;
+			padding: 5px;
+			width: 100%;
+			// border: 1px solid black;
+		}
+
+		@for $i from 1 through 5 {
+			@for $j from 1 through 5 {
+				&:nth-child(#{(($i - 1) * 5) + $j}) {
+					grid-row: #{$i};
+					grid-column: #{$j};
+				}
+			}
+		}
+
+		// &:nth-child(1) {
+		// 	border: 4px solid red;
+		// }
+	}
+}
+
+#Coins {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: 60px 1fr;
+	align-items: center;
+	// padding: 0 10px 0 10px;
+	// background: blue;
+
+	img {
+		height: 50px;
+		padding: 4px; // Special fix so that the icon is roughly the same size as the diamond
+		// background: blue;
+	}
+
+	span {
+		font-size: xx-large;
+		// background: blue;
+	}
+
+	// @media #{map-get($mq, "xlarge")} {
+	// 	grid-template-columns: 50px 50px 1fr;
+	// }
+}
+
+#Gems {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: 60px 1fr;
+	align-items: center;
+	// padding: 0 10px 0 10px;
+	// background:red;
+
+	img {
+		height: 50px;
+		// background: blue;
+	}
+
+	span {
+		font-size: xx-large;
+		// background: blue;
+	}
+}

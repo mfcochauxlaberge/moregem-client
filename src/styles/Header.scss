@@ -1,0 +1,36 @@
+#Header {
+	grid-area: header;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+	nav ul {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+		justify-content: center;
+		align-items: center;
+
+		li {
+			
+			a {
+				display: block;
+				padding: 10px;
+				
+				img {
+					display: block;
+					width: 100%;
+					// height: auto;
+					// margin: auto;
+					// max-height: 40px;
+					// filter: invert(55%) sepia(80%) saturate(3420%) hue-rotate(161deg) brightness(94%) contrast(101%);
+					opacity: 0.4;
+				}
+
+				&.active {
+					img {
+						opacity: 0.8;
+					}
+				}
+			}
+		}
+	}
+}

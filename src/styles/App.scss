@@ -1,0 +1,40 @@
+@import "kss/_kss";
+
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+// @import url("https://fonts.googleapis.com/css?family=Roboto");
+// @import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+@import url("https://fonts.googleapis.com/css?family=Lora");
+
+html {
+	font-family: "Roboto Condensed", sans-serif;
+	font-family: "PT Sans", sans-serif;
+}
+
+body {
+	display: grid;
+	// grid-template-rows: 100%;
+	// justify-content: center;
+	// background: beige;
+}
+
+#App {
+	display: grid;
+	max-width: 500px;
+	margin: auto;
+	// background: #888;
+
+	grid-template-columns: 100%;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas:
+		"header"
+		"body"
+		"footer"
+	;
+}
+
+// @media #{map-get($mq, "xlarge")} {
+// 	grid-template-columns: 50px 50px 1fr;
+// }

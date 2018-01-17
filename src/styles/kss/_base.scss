@@ -1,0 +1,79 @@
+* {
+    @include nospace;
+    box-sizing: border-box;
+	font-size: 100%;
+	outline: none;
+}
+
+@for $h from 1 through 6 {
+	h#{$h} {
+		font-size: map-get($size-headers, $h);
+		font-weight: bold;
+	}
+}
+
+ul {
+  margin: 0 0 0 20px;
+}
+blockquote { font-style: italic; }
+table {
+	width: 100%;
+	border-collapse: collapse;
+	th { text-align: left; }
+	th, td { vertical-align: top; }
+}
+// form {
+//     margin: 1rem 0;
+// }
+input {
+	margin: 0.2rem 0;
+	padding: 0.6rem 1rem;
+	border: 1px solid #ddd;
+	border-left-width: 6px;
+	border-radius: 0;
+
+	@media #{map-get($mq, "le-small")} {
+		width: 100%;
+
+		&[type=submit], &[type=checkbox] {
+			width: auto;
+		}
+	}
+
+	&:required:invalid {
+		border-left-color: #fcc;
+		box-shadow: none;
+	}
+
+	&:required:valid {
+		border-left-color: #cec;
+		box-shadow: none;
+	}
+}
+button[type=button]::-moz-focus-inner {
+	border: none;
+}
+button[type=submit] {
+	@extend input;
+	color: #fff;
+	border: none;
+	background: #5d8aa8;
+	cursor: pointer;
+}
+
+nav ul {
+	margin: 0;
+	list-style-type: none;
+
+	a { text-decoration: none; }
+}
+
+hr { border: none; height: 1px; background: black; }
+
+table {
+	table-layout: fixed;
+
+	td {
+		padding: 4px;
+	}
+}
