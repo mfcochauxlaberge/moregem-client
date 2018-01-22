@@ -4,13 +4,12 @@
 	grid-gap: 4px;
 
 	.Tile {
-		margin: 0; padding: 10px;
+		margin: 0; padding: 20%;
 		background: rgba(130, 180, 110, 0.6);
 		cursor: pointer;
 
 		img {
 			display: block;
-			padding: 5px;
 			width: 100%;
 			// border: 1px solid black;
 		}
