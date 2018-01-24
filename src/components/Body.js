@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
 // Components
+import Help from './Help';
 import Map from './Map';
 
 // Assets
@@ -18,7 +19,7 @@ class Body extends Component {
         <Route exact path="/rankings" component={() => <p>You're not first.</p>} />
         <Route exact path="/world"    component={() => <p>There are other players.</p>} />
         <Route exact path="/profile"  component={() => <p>It is you.</p>} />
-        <Route exact path="/help"     component={() => <p>You're smart, you don't need help.</p>} />
+        <Route exact path="/help"     component={Help} />
       </div>
     );
   }
